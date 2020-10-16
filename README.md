@@ -4,10 +4,10 @@ A webservice to get price for watches.
 
 ## Development Environment 
 
-OS: Mac OS X
-Editor: Eclipse 2020
-JAVA version 1.8.0_191
-Maven version 3.6.3
+* OS: Mac OS X
+* Editor: Eclipse 2020
+* JAVA version 1.8.0_191
+* Maven version 3.6.3
 
 ## Helper
 Started with Spring Initializr. The Initializr offers a fast way to pull in all the dependencies you need for a web-service application and did a lot of the setup. This example needs the Spring Web dependency.
