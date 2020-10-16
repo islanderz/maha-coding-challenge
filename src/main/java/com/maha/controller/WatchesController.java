@@ -29,7 +29,6 @@ public class WatchesController {
 
 	private static final Logger log = LoggerFactory.getLogger(WatchesController.class);
 
-
 	@Autowired
 	private List<WatchesModel> watchesModelList;
 
@@ -46,14 +45,13 @@ public class WatchesController {
 	public Price checkout(@RequestParam(value = "watch_ids") List<Long> watch_ids) {
 
 		Long priceOfAllWatches = 0L;
-		
+
 		// Get the list of all watches from the repository
 		watchesModelList = watchesRepository.findAll();
 
-		// IMPROVEMENT: A more efficient way would have been to create a findByIds in
-		// WatchesRepository
-		// This will allow to only get the watches for the watch IDs that have been
-		// entered instead of all watches
+		// IMPROVEMENT: A more performant way would have been to create a findByIds in
+		// WatchesRepository, which will allow to only get the watches for the watch IDs
+		// that have been entered, instead of all watches
 
 		if (!watchesModelList.isEmpty() && watch_ids != null) {
 
@@ -90,13 +88,15 @@ public class WatchesController {
 							// Get the total price of watches bought with discount
 							priceOfAllWatches = priceOfAllWatches + numberOfDiscoutedBulk * discountPrice;
 
-							//  Add the remainder , if no remainder do nothing --> user int remainder = dividend % divisor; 
+							// Add the remainder , if no remainder do nothing --> user int remainder =
+							// dividend % divisor;
 							long remainder = entryCount.getValue() % dicountQuantiy;
 							if (remainder > 0) {
-								// Assumed that if additional items is bought beyond bulk discounted, this is priced normall
+								// Assumed that if additional items is bought beyond bulk discounted, this is
+								// priced normall
 								priceOfAllWatches = priceOfAllWatches + remainder * unitPrice;
 							}
-							
+
 						} else {
 
 							// Get the total price of watches bought without discount
@@ -106,10 +106,10 @@ public class WatchesController {
 						// If there is no discount on this watch
 						priceOfAllWatches = priceOfAllWatches + numberOfWatchesBought * unitPrice;
 					}
-				} 
+				}
 
 				// Prints the watches bought and how much of each
-				System.out.println(entryCount.getKey() + ":" + entryCount.getValue());
+				log.debug(entryCount.getKey() + ":" + entryCount.getValue());
 			}
 
 		}

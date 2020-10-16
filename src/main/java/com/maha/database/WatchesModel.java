@@ -26,10 +26,7 @@ public class WatchesModel {
 		this.discount_quantity = discount_quantity;
 		this.discount_price = discount_price;
 	}
-
-
-
-
+ 
 	public Long getWatch_id() {
 		return watch_id;
 	}
@@ -69,8 +66,5 @@ public class WatchesModel {
 	public void setDiscount_price(Long discount_price) {
 		this.discount_price = discount_price;
 	}
-	
-
-	
-
+	 
 }
