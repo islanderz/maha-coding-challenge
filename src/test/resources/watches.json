@@ -1,0 +1,30 @@
+[
+  {
+    "watch_id": 1,
+    "watch_name": "Rolex",
+    "unit_price": 100,
+    "discount_quantity": 3,
+    "discount_price": 200
+  },
+  {
+    "watch_id": 2,
+    "watch_name": "Michael Kors",
+    "unit_price": 80,
+    "discount_quantity": 2,
+    "discount_price": 120
+  },
+  {
+    "watch_id": 3,
+    "watch_name": "Swatch",
+    "unit_price": 50,
+    "discount_quantity": null,
+    "discount_price": null
+  },
+  {
+    "watch_id": 4,
+    "watch_name": "Casio",
+    "unit_price": 30,
+    "discount_quantity": null,
+    "discount_price": null
+  }
+]
