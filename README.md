@@ -21,7 +21,6 @@ Started with Spring Initializr. The Initializr offers a fast way to pull in all
 * Swagger UI
 
 
-
 ## Setup
 Clone git repository: https://github.com/islanderz/maha-coding-challenge.git
 
@@ -32,8 +31,8 @@ Execute main application 'WatchesApiApplication' or run the packaged jar/war
 Access Swagger UI through browser: http://localhost:8080/swagger
 
 Swagger provides a very handy way to visualize and interact with the API’s deployed, and to try out with sample requests. It was really helpful to test application:
-![Image of Yaktocat]
-(https://imgur.com/cE3Dvoi =250x250)
+
+![Sample output from swagger](https://imgur.com/cE3Dvoi)
 
 
 ## Approach
