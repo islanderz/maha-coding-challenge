@@ -30,9 +30,7 @@ Execute main application 'WatchesApiApplication' or run the packaged jar/war
 
 Access Swagger UI through browser: http://localhost:8080/swagger
 
-Swagger provides a very handy way to visualize and interact with the API’s deployed, and to try out with sample requests. It was really helpful to test application:
-
-![Sample output from swagger](https://imgur.com/cE3Dvoi)
+Swagger provides a very handy way to visualize and interact with the API’s deployed, and to try out with sample requests. It was really helpful to test the application.
 
 
 ## Approach
