@@ -28,7 +28,7 @@ Build with maven: maven clean install
 
 Execute main application 'WatchesApiApplication' or run the packaged jar/war
 
-Access Swagger UI through browser: http://localhost:8080/swagger
+Access Swagger UI through browser: http://localhost:8080/swagger-ui.html
 
 Swagger provides a very handy way to visualize and interact with the API’s deployed, and to try out with sample requests. It was really helpful to test the application.
 
@@ -41,6 +41,12 @@ The calculation of the price is developed as a stand-alone function, taking the 
 Since data connectivity is a point of failure, a circuit-breaker pattern was implemented, so that the data can be pulled from a local file, should the database link be down.
 
 The integration tests were very handy to test incrementally the development of the webservice and the end-to-end request/response for simple and less simple scenarios - for example, when combination of watches without discount, and discounted plus non-discounted price of the same watch are involved.  
+
+
+## Improvements
+For the webservice request, wrong watch IDs gave "error": "Internal Server Error". Additional validations to be added.
+
+Another improvement on performance is on the operation to get all the watches to compute the total price. Istead of fetching all the watches, we could use a 'query by IDs' to retrieve only the watches which are part of the 'order' and for which the details are needed. 
 
 
 
